@@ -1,9 +1,8 @@
-var http = require('http');  //require means get a module
-var output = require('./output');  //-->we exported an object
+var http = require('http');  //this allows us to use this in HTTP in browser
+var output = require('./output');  //this links to output.js file
 
 http.createServer(function(req, res){
   res.writeHead(200);
-  res.write(' ' + output.account());
-  res.write(' ' + output.converter());
+  res.write(output.account() + output.converter());
   res.end();
 }).listen(3000);

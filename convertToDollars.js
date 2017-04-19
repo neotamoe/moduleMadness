@@ -5,5 +5,6 @@
 function convertToDollars(number){
   return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 }
+// console.log (convertToDollars(149583));  to test in terminal
 
 module.exports=convertToDollars;
